@@ -1,0 +1,42 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Monitor 17 pulgadas",
+      "descripcion": "Monitor plano LCD",
+      "precio": 110.22,
+      "createdAt": "2024-10-23T10:56:35.101Z"
+    },
+    {
+      "nombre": "Teclado ergonomico",
+      "descripcion": "Teclado USB en español",
+      "precio": 20.15,
+      "createdAt": "2025-11-06T12:22:34.096Z",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "nombre": "Impresora",
+      "descripcion": "Impresora Epson",
+      "precio": 44.99,
+      "createdAt": "2025-11-06T12:50:07.914Z"
+    }
+  ],
+  "clientes": [
+    {
+      "id": "1",
+      "nombre": "John",
+      "apellido": "Doe"
+    },
+    {
+      "id": "2",
+      "nombre": "Jane",
+      "apellido": "Doe"
+    },
+    {
+      "id": "3",
+      "nombre": "Juan",
+      "apellido": "Doe"
+    }
+  ]
+}

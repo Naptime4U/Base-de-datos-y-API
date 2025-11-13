@@ -51,35 +51,35 @@ export async function eliminarClienteDB(formData) {
 
 // API
 
-export async function nuevoProductoAPI(formData) {
-    const [nombre, descripcion, precio] = formData.values()
+export async function nuevoClienteAPI(formData) {
+    const [nombre, apellido] = formData.values()
 
-    const response = await fetch('http://localhost:3001/productos', {
+    const response = await fetch('http://localhost:3001/clientes', {
         method: 'POST',
-        body: JSON.stringify({ nombre, descripcion, precio: +precio, createdAt: new Date().toISOString() })
+        body: JSON.stringify({ nombre, apellido, createdAt: new Date().toISOString() })
     })
     const data = await response.json()
 
-    revalidatePath('/productos-api')
+    revalidatePath('/clientes-api')
 }
 
 
-export async function editarProductoAPI(formData) {
-    const [id, nombre, descripcion, precio] = formData.values()
+export async function editarClienteAPI(formData) {
+    const [id, nombre, apellido] = formData.values()
 
-    const response = await fetch('http://localhost:3001/productos/' + id, {
+    const response = await fetch('http://localhost:3001/clientes/' + id, {
         method: 'PUT',
-        body: JSON.stringify({ nombre, descripcion, precio: +precio, createdAt: new Date().toISOString() })
+        body: JSON.stringify({ nombre, apellido, createdAt: new Date().toISOString() })
     })
     const data = await response.json()
-    revalidatePath('/productos-api')
+    revalidatePath('/clientes-api')
 }
 
 
-export async function eliminarProductoAPI(formData) {
+export async function eliminarClienteAPI(formData) {
     const id = formData.get('id')
 
-    await fetch('http://localhost:3001/productos/' + id, { method: 'DELETE' })
+    await fetch('http://localhost:3001/clientes/' + id, { method: 'DELETE' })
 
-    revalidatePath('/productos-api')
+    revalidatePath('/clientes-api')
 }
